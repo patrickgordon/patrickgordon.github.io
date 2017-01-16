@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>{{ page.title }}</title>
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
-  </head>
-  <body>
-    <div class="container">
-    {{ content }}
-    </div><!-- /.container -->
+    <link rel="stylesheet" type="text/css" href="/styles/icons.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+          type="text/css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="container">
+            <div class="row center-sm">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="header__container">
+                        <img src="/assets/headshot.png" alt="My Face Lol" class="header__avatar"/>
+                        <h1>Patrick Gordon</h1>
+                        <ul class="header__social-icons">
+                            <li>
+                                <a href="mailto:pgord1@gmail.com"><span class="icon-envelope-o"></span></a>
+                            </li>
+                            <li>
+                                <a href="https://au.linkedin.com/in/patrick-gordon-1309ab49"><span
+                                        class="icon-github"></span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/patrickgordon"><span
+                                        class="icon-linkedin-square"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content__container container">
+        <div class="row center-sm">
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                {{ content }}
+            </div>
+        </div>
+    </div>
     <footer>
-      <ul>
-        <li><a href="mailto:pgord1@gmail.com">Email</a></li>
-        <li><a href="https://au.linkedin.com/in/patrick-gordon-1309ab49">LinkedIn</a></li>
-        <li><a href="https://github.com/patrickgordon">github.com/patrickgordon</a></li>
-      </ul>
+        Made with love by <a href="http://patrick-gordon.com">Patrick
+        Gordon</a>
     </footer>
-  </body>
+</div>
+</body>
 </html>

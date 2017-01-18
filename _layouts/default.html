@@ -4,48 +4,46 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
     <link rel="stylesheet" type="text/css" href="/styles/icons.css">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico" >
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
           type="text/css">
 </head>
 <body>
 <div class="wrapper">
-    <header>
-        <div class="container">
-            <div class="row center-sm">
-                <div class="col-xs-12 col-sm-12 col-md-6">
-                    <div class="header__container">
-                        <img src="/assets/headshot.png" alt="My Face Lol" class="header__avatar"/>
-                        <h1>Patrick Gordon</h1>
-                        <ul class="header__social-icons">
-                            <li>
-                                <a href="mailto:pgord1@gmail.com"><span class="icon-envelope-o"></span></a>
-                            </li>
-                            <li>
-                                <a href="https://au.linkedin.com/in/patrick-gordon-1309ab49"><span
-                                        class="icon-github"></span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/patrickgordon"><span
-                                        class="icon-linkedin-square"></span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    {% include header.html %}
     <div class="content__container container">
-        <div class="row center-sm">
+        <div class="row center-sm" style="margin-bottom: 20px;">
             <div class="col-xs-12 col-sm-12 col-md-6">
                 {{ content }}
             </div>
         </div>
+        <div class="row center-sm">
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <h2>Last 5 Blog Posts</h2>
+                {% for post in site.posts %}
+                <div class="card">
+                    <div class="card__title">
+                        <h3 class="card__titleText">{{ post.title }}</h3>
+                    </div>
+                    <div class="card__body">
+                        <p>
+                            <em>
+                                {{ post.excerpt }}
+                            </em>
+                        </p>
+                        <a href="{{ post.url }}" class="button">Read more</a>
+                        <br/>
+                        <br/>
+                        <span>
+                            {{ post.date | date_to_long_string }}
+                        </span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-    <footer>
-        Made with love by <a href="http://patrick-gordon.com">Patrick
-        Gordon</a>
-    </footer>
+    {% include footer.html %}
 </div>
 </body>
 </html>

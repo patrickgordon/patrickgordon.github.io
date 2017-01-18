@@ -1,2 +1,3 @@
 name: Patrick Gordon
 markdown: kramdown
+permalink: /:year/:month/:day/:title

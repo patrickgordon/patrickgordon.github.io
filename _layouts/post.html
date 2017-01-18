@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/posts.css">
+    <link rel="stylesheet" type="text/css" href="/styles/icons.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+          type="text/css">
+</head>
+<body>
+<div class="wrapper">
+    {% include header.html %}
+    <div class="content__container container">
+        <div class="row center-sm">
+            <div class="col-xs-12 col-sm-12 col-md-6" style="text-align: justify">
+                <h1>{{ page.title }}</h1>
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+</div>
+</body>
+</html>

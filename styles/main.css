@@ -103,6 +103,10 @@ footer {
   margin: 0 15px 0 15px;
 }
 
+.card__tags {
+  color: #dddddd;
+}
+
 /* Link button */
 
 .button:link, .button:visited {

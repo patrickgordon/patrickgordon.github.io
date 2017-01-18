@@ -2,7 +2,7 @@
 layout: post
 title:  "How I reduced my bundle size by 400kBs by changing only a few lines of code"
 date: 2016-08-31
-categories: "Web Development"
+category: webdev
 tags: react webpack optimisation
 ---
 

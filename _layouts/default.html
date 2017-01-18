@@ -26,6 +26,11 @@
                         <h3 class="card__titleText">{{ post.title }}</h3>
                     </div>
                     <div class="card__body">
+                        <span class="card__tags">
+                            {% for tag in post.tags %}
+                                {{ tag }} &nbsp;
+                            {% endfor %}
+                        </span>
                         <p>
                             <em>
                                 {{ post.excerpt }}

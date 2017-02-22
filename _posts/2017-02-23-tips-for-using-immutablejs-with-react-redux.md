@@ -29,6 +29,7 @@ Sad that you can only use `.filter()` on arrays? Well, you can use them on all o
 
 ### 2. Make sure to use `.get()` in `mapStateToProps`
 I had the following code:
+
 ```javascript
 const mapStateToProps = state => ({
   isFetching: state.contacts.isFetching,
@@ -37,6 +38,7 @@ const mapStateToProps = state => ({
 ```
 
 I couldn't for the life of me figure out why, after a successful redux action, my components were not re-rendering. Instead, I needed to have:
+
 ```javascript
 const mapStateToProps = state => ({
   isFetching: state.contacts.get('isFetching'),
@@ -46,6 +48,7 @@ const mapStateToProps = state => ({
 
 ### 3. Creating initialState with ImmutableJS
 Here's an example of how to use initialState with ImmutableJS and in your reducer.
+
 ```javascript
 // SomeModule.js
 
@@ -119,7 +122,8 @@ You can use `.find()` instead as it will return the first value for which the pr
 ```javascript
 const mapStateToProps = (state, ownProps) => ({
   isFetching: state.contacts.get('isFetching'),
-  item: state.contacts.get('items').find(item => item.get('id') === ownProps.params.id),
+  item: state.contacts.get('items')
+                      .find(item => item.get('id') === ownProps.params.id),
 });
 ```
 

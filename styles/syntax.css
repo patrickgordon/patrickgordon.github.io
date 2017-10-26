@@ -165,6 +165,7 @@
   color: #ffffff;
   background-color: #212121;
   padding: 10px;
+  overflow: scroll;
 }
 .highlight .n, .highlight .py, .highlight .nx {
   color: #ffffff;
@@ -186,4 +187,9 @@
 }
 .highlight .o {
   color: #f92672;
+}
+
+.lineno {
+	padding-right: 10px;
+	border-right: 1px solid #919191;
 }

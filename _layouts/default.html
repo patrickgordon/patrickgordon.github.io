@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="/styles/icons.css">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
-          type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<div class="wrapper">
-    {% include header.html %}
-    <div class="content__container container-fluid">
-        <div class="row center-sm" style="margin-bottom: 20px;">
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                {{ content }}
-            </div>
-        </div>
-        <div class="row center-sm">
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                <h2>Latest Blog Posts </h2>
-                {% for post in site.posts %}
-                <div class="card">
-                    <div class="card__title">
-                        <h3 class="card__titleText">{{ post.title }}</h3>
-                    </div>
-                    <div class="card__body">
-                        <span class="card__tags">
-                            {% for tag in post.tags %}
-                                {{ tag }} &nbsp;
-                            {% endfor %}
-                        </span>
-                        <p>
-                            <em>
-                                {{ post.excerpt }}
-                            </em>
-                        </p>
-                        <a href="{{ post.url }}" class="button">Read more</a>
-                        <br/>
-                        <br/>
-                        <span>
-                            {{ post.date | date_to_long_string }}
-                        </span>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    {% include footer.html %}
-</div>
-</body>
+
+	<head>
+		<title>{{ page.title }}</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/icons.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/default.css">
+		<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<div class="wrapper">
+			{% include header.html %}
+			<div class="content__container container-fluid">
+					{{ content }}
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<h2 style="margin-top: 0px">Latest Blog Posts </h2>
+						<div class="cards__container">
+							{% for post in site.posts %}
+							<div class="card">
+								<div class="card__title">
+									<h3 class="card__titleText">{{ post.title }}</h3>
+								</div>
+								<div class="card__body">
+									<p>
+										{{ post.excerpt }}
+									</p>
+									<a href="{{ post.url }}" class="button">Read more</a>
+									<br/>
+									<br/>
+
+									<div class="card__bottom">
+										<span>
+											{{ post.date | date_to_long_string }}
+										</span>
+										<div class="card__tags">
+											{% for tag in post.tags %} {{ tag }} &nbsp; {% endfor %}
+										</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+			{% include footer.html %}
+		</div>
+	</body>
+
 </html>

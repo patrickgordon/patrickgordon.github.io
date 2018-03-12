@@ -1,0 +1,20 @@
+---
+---
+
+@import "config";
+@import "breakpoints";
+
+.blurb {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin-bottom: 24px;
+
+	@include medium {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+.blurb__item {
+	padding: $grid-unit;
+	text-align: center;
+}

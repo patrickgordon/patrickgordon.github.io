@@ -11,3 +11,5 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
+sass:
+    sass_dir: _sass

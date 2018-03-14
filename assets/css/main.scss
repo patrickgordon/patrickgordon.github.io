@@ -34,11 +34,11 @@ header {
 }
 
 .header__name {
-	margin-bottom: 0px;
+	margin-bottom: $grid-unit;	
 }
 
 .header__subTitle {
-	margin-top: 6px;
+	margin-bottom: $grid-unit;
 }
 
 .header__avatar {
@@ -130,7 +130,7 @@ footer {
 /* Link button */
 
 .button:link, .button:visited {
-	background-color: #6393c1;
+	background-color: #3197d6;
 	color: white;
 	padding: 14px 20px;
 	text-align: center;

@@ -4,6 +4,7 @@ title:  "Tips for using ImmutableJS with React, Redux"
 date: 2017-02-23
 category: webdev
 tags: react redux immutablejs
+image: immutable.svg
 ---
 
 I recently started overhauling the frontend for [SimpleRM](http://simplerm.co) because it wasn't performant and I have improved my React & Redux work a lot since I started building it. I decided that this would be a good opportunity to explore the popular library [ImmutableJS](link). I have had many recommendations from other FE devs and was eager to give it a go.

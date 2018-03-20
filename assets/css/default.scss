@@ -15,6 +15,24 @@
 }
 
 .blurb__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding: $grid-unit;
 	text-align: center;
+}
+
+.blurb__image {
+	width: 64px;
+	height: 64px;
+
+	@include medium {
+		width: 84px;
+		height: 84px;
+	}
+
+	@include large {
+		width: 128px;
+		height: 128px;	
+	}
 }

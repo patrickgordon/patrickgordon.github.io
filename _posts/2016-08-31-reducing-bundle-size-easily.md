@@ -4,6 +4,7 @@ title:  "How I reduced my bundle size by 400kBs by changing only a few lines of 
 date: 2016-08-31
 category: webdev
 tags: react webpack optimisation
+image: webpack.svg
 ---
 
 Like a lot of people, I use [Slack](https://slack.com/) to remain involved in the software developer communities in my city & country. On a particular Slack I frequent, we were discussing a code sample and how I had imported [lodash](https://lodash.com/). I was importing lodash like this:

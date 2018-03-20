@@ -16,7 +16,12 @@
 		<div>
 			{% include header.html %}
 			<div class="content__container post">
-				<h1 class="post__header">{{ page.title }}</h1>
+				<div class="post__header">
+					<h1 class="post__title">{{ page.title }}</h1>
+					{% if page.subtitle != null %}
+						<h2 class="post__subtitle">{{ page.subtitle }}</h2>
+					{% endif %}
+				</div>
 				{{ content }}
 			</div>
 			{% include footer.html %}

@@ -36,6 +36,9 @@
 											{% for tag in post.tags %} {{ tag }} &nbsp; {% endfor %}
 										</div>
 										<h3 class="card__titleText">{{ post.title }}</h3>
+										{% if post.subtitle != null %}
+										<h4 class="card__subtitleText">{{ post.subtitle }}</h4>
+										{% endif %}
 										<span>
 											{{ post.date | date_to_long_string }}
 										</span>

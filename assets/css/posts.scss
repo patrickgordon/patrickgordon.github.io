@@ -15,5 +15,16 @@ p > img {
 }
 
 .post__header {
-	margin-top: 0;
+	margin-bottom: $grid-unit;
+	border-bottom: 1px solid #dddddd;
+	padding-bottom: calc(#{$grid-unit} * 2);
+}
+
+.post__title {
+	margin-top: 0px;
+	margin-bottom: $grid-unit;
+}
+
+.post__subtitle {
+	margin: 0;
 }

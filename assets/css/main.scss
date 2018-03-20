@@ -182,3 +182,7 @@ blockquote {
 	padding: 0 $grid-unit;
 	background: #f9f9f9;
 }
+
+a {
+	word-wrap: break-word;
+}

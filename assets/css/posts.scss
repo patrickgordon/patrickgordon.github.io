@@ -10,6 +10,7 @@ p > img {
 
 .post {
 	display: grid;
+	grid-template-columns: repeat(auto-fill, 1fr);
 	padding: 24px;
 	text-align: justify;
 }

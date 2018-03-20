@@ -192,3 +192,8 @@
 	padding-right: 10px;
 	border-right: 1px solid #919191;
 }
+
+.highlight {
+	overflow-x: scroll;
+	font-size: 0.85rem;
+}

@@ -170,3 +170,10 @@ footer {
 .button:hover, .button:active {
 	color: #FFF3CA;
 }
+
+blockquote {
+	margin-left: 32px;
+	border-left: 8px solid #ccc;
+	padding: 0 $grid-unit;
+	background: #f9f9f9;
+}

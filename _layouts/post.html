@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/posts.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/icons.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
-          type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<div>
-    {% include header.html %}
-    <div class="content__container container-fluid">
-        <div class="row center-sm">
-            <div class="col-xs-12 col-sm-12 col-md-6" style="text-align: justify">
-                <h1>{{ page.title }}</h1>
-                {{ content }}
-            </div>
-        </div>
-    </div>
-    {% include footer.html %}
-</div>
-</body>
+	<head>
+		<title>{{ page.title }}</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/posts.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/icons.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+		<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<div>
+			{% include header.html %}
+			<div class="content__container post">
+				<h1 class="post__header">{{ page.title }}</h1>
+				{{ content }}
+			</div>
+			{% include footer.html %}
+		</div>
+	</body>
 </html>

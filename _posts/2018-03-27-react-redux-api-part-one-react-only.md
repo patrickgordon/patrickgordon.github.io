@@ -58,7 +58,7 @@ class Posts extends Component {
 }
 ```
 
-#### Here's a working jsFiddle of this example: https://jsfiddle.net/patrickgordon/69z2wepo/142592/
+#### Here's a working jsFiddle of this example: [https://jsfiddle.net/patrickgordon/69z2wepo/142592/](https://jsfiddle.net/patrickgordon/69z2wepo/142592/)
 
 In the above example we are first defining our components local state with an empty array for `posts`. This is what we will use to pass to our `PostList` component. We're then using the lifecycle method `componentDidMount` to fire off a fetch with some standard configuration. If you're unfamiliar with promises and async/await, this part may look confusing but essentially we are waiting to get a response from the API and then using `this.setState` to update the component state with the JSON response from the API. This triggers a re-render and the data is then displayed in the list to the user.
 
